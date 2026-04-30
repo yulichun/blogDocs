@@ -1,0 +1,14 @@
+{
+  "name": "blogdocs-gitbook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "honkit build . _book",
+    "serve": "honkit serve .",
+    "clean": "rimraf _book"
+  },
+  "devDependencies": {
+    "honkit": "^6.1.7",
+    "rimraf": "^6.0.1"
+  }
+}

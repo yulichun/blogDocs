@@ -1,0 +1,15 @@
+1.prometheus是pull模型，influxdb是push
+pull模式和push模式在性能和资源占用了差异并不大，他们本身都是基于http，数据传输量也不会有太大差别。
+不过pull方式利于热备方式部署，push方式的利于路由。他们的好坏主要还是根据项目大小，网络架构有关。个人觉得prometheus暂时仅支持中小场景。influxDB有望可以支持大场景（现在开源influxDB也不支持分布式）。
+不过，这都是可以转化的。prometheus可以通过push gateway转换成push模型（这样可以解决prometheus server因网络隔离等没法访问监控节点的问题）， influxdb可以通过collector转化成pull模型（influxdb+collector看成一整个系统，它们自动获取每个节点的监控数据）。
+
+2.prometheus有官方的alert集成，influxdb的kapacity貌似对告警支持有限。
+
+3.prometheus用的存储空间小，但是现在硬盘并没那么值钱，我觉得这点差别是可以忽略的。
+
+4.influxdb的查询很像SQL，prometheus的查询有点学习成本。
+但是influxDB不支持多个metric的聚合操作。
+
+5.prometheus支持recording_rule，以防止多处告警规则或dahsborard中用了同一个指标表达式，造成同一个表达式的重复计算，产生性能浪费
+
+6.prometheus的干爹是google

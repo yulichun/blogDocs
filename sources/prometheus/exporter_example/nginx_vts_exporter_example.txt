@@ -1,0 +1,83 @@
+# HELP nginx_server_bytes request/response bytes
+# TYPE nginx_server_bytes counter
+nginx_server_bytes{direction="in",host="*"} 593540
+nginx_server_bytes{direction="in",host="192.168.196.128"} 593108
+nginx_server_bytes{direction="in",host="localhost"} 432
+nginx_server_bytes{direction="out",host="*"} 8.255418e+06
+nginx_server_bytes{direction="out",host="192.168.196.128"} 8.229166e+06
+nginx_server_bytes{direction="out",host="localhost"} 26252
+# HELP nginx_server_cache cache counter
+# TYPE nginx_server_cache counter
+nginx_server_cache{host="*",status="bypass"} 0
+nginx_server_cache{host="*",status="expired"} 0
+nginx_server_cache{host="*",status="hit"} 0
+nginx_server_cache{host="*",status="miss"} 0
+nginx_server_cache{host="*",status="revalidated"} 0
+nginx_server_cache{host="*",status="scarce"} 0
+nginx_server_cache{host="*",status="stale"} 0
+nginx_server_cache{host="*",status="updating"} 0
+nginx_server_cache{host="192.168.196.128",status="bypass"} 0
+nginx_server_cache{host="192.168.196.128",status="expired"} 0
+nginx_server_cache{host="192.168.196.128",status="hit"} 0
+nginx_server_cache{host="192.168.196.128",status="miss"} 0
+nginx_server_cache{host="192.168.196.128",status="revalidated"} 0
+nginx_server_cache{host="192.168.196.128",status="scarce"} 0
+nginx_server_cache{host="192.168.196.128",status="stale"} 0
+nginx_server_cache{host="192.168.196.128",status="updating"} 0
+nginx_server_cache{host="localhost",status="bypass"} 0
+nginx_server_cache{host="localhost",status="expired"} 0
+nginx_server_cache{host="localhost",status="hit"} 0
+nginx_server_cache{host="localhost",status="miss"} 0
+nginx_server_cache{host="localhost",status="revalidated"} 0
+nginx_server_cache{host="localhost",status="scarce"} 0
+nginx_server_cache{host="localhost",status="stale"} 0
+nginx_server_cache{host="localhost",status="updating"} 0
+# HELP nginx_server_connections nginx connections
+# TYPE nginx_server_connections gauge
+nginx_server_connections{status="accepted"} 20
+nginx_server_connections{status="active"} 1
+nginx_server_connections{status="handled"} 20
+nginx_server_connections{status="reading"} 0
+nginx_server_connections{status="requests"} 1756
+nginx_server_connections{status="waiting"} 0
+nginx_server_connections{status="writing"} 1
+# HELP nginx_server_requests requests counter
+# TYPE nginx_server_requests counter
+nginx_server_requests{code="1xx",host="*"} 0
+nginx_server_requests{code="1xx",host="192.168.196.128"} 0
+nginx_server_requests{code="1xx",host="localhost"} 0
+nginx_server_requests{code="2xx",host="*"} 1745
+nginx_server_requests{code="2xx",host="192.168.196.128"} 1741
+nginx_server_requests{code="2xx",host="localhost"} 4
+nginx_server_requests{code="3xx",host="*"} 3
+nginx_server_requests{code="3xx",host="192.168.196.128"} 3
+nginx_server_requests{code="3xx",host="localhost"} 0
+nginx_server_requests{code="4xx",host="*"} 7
+nginx_server_requests{code="4xx",host="192.168.196.128"} 7
+nginx_server_requests{code="4xx",host="localhost"} 0
+nginx_server_requests{code="5xx",host="*"} 0
+nginx_server_requests{code="5xx",host="192.168.196.128"} 0
+nginx_server_requests{code="5xx",host="localhost"} 0
+nginx_server_requests{code="total",host="*"} 1755
+nginx_server_requests{code="total",host="192.168.196.128"} 1751
+nginx_server_requests{code="total",host="localhost"} 4
+# HELP nginx_upstream_bytes request/response bytes
+# TYPE nginx_upstream_bytes counter
+nginx_upstream_bytes{direction="in",upstream="baidu_server"} 1974
+nginx_upstream_bytes{direction="out",upstream="baidu_server"} 2014
+# HELP nginx_upstream_requests requests counter
+# TYPE nginx_upstream_requests counter
+nginx_upstream_requests{code="1xx",upstream="baidu_server"} 0
+nginx_upstream_requests{code="2xx",upstream="baidu_server"} 0
+nginx_upstream_requests{code="3xx",upstream="baidu_server"} 2
+nginx_upstream_requests{code="4xx",upstream="baidu_server"} 2
+nginx_upstream_requests{code="5xx",upstream="baidu_server"} 0
+nginx_upstream_requests{code="total",upstream="baidu_server"} 4
+# HELP nginx_upstream_response request response time
+# TYPE nginx_upstream_response gauge
+nginx_upstream_response{backend="10.0.1.25:80",upstream="baidu_server"} 0
+nginx_upstream_response{backend="180.101.49.11:80",upstream="baidu_server"} 0
+nginx_upstream_response{backend="180.101.49.12:80",upstream="baidu_server"} 0
+# HELP nginx_vts_exporter_build_info A metric with a constant '1' value labeled by version, revision, branch, and goversion from which nginx_vts_exporter was built.
+# TYPE nginx_vts_exporter_build_info gauge
+nginx_vts_exporter_build_info{branch="fix-docker-error",goversion="go1.8",revision="0f3dbb44a86340d65bf3d6abbcc0ee88663cb419",version="0.4"} 1
